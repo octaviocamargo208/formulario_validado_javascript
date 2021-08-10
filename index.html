@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Pesquisa</title>
+    <script type="text/javascript" src="javascript/javascript.js"></script>
+</head>
+<body>
+    <div>
+        <h1>Formulario de Pesquisa</h1>
+        <p>Obrigado pelo seu tempo e por nos ajudar a melhorar nossa plataforma</p>
+        <br>
+    </div>
+
+    
+    <form name="formPesquisa">
+        <fieldset> <!--INFORMAÇÕES PESSOAIS-->
+            <legend>Informações pessoais:</legend>
+            <div>
+                <!--legenda-->
+                <label>Nome</label>
+                <br>
+                <!--Entrada de valor-->
+                <input type="text" name="nome" id="nome" placeholder="Insira o seu nome" >
+            </div>
+
+            <div>
+                <label>E-mail</label>
+                <br>
+                <input type="email" name="email" id="email" placeholder="Insira o seu E-mail">
+            </div>
+
+            <div>
+                <label>Idade</label>
+                <br>
+                <input type="number" min="10" name="idade" id="idade" placeholder="insira a sua idade">
+            </div>
+            <div>
+                <label>Qual opção descreve melhor sua função atual?</label><br>
+                <select name="ocupacao" id="funcao">
+                    <option disabled selected value>Selecione sua função atual</option>
+                    <option>Estudante</option>
+                    <option>Trabalho em tempo integral</option>
+                    <option>Aprendiz em tempo integral</option>
+                    <option>Prefiro não dizer</option>
+                    <option>Outra..</option>
+                </select>
+            </div>
+           
+        </fieldset>
+
+        <div>
+            <label>Você recomendaria a nosso site para um amigo?</label>
+            <br>
+            <label>
+                <input type="radio" name="recomendacao" id="recomendacao" checked> Definitivamente <br>
+            </label>
+            <label>
+                <input type="radio" name="recomendacao" id="recomendacao"> Talvez <br>
+            </label>
+            <label>
+                <input type="radio" name="recomendacao" id="recomendacao"> Não recomendaria <br>
+            </label>
+        </div>
+       
+        <div>
+            <label>Qual é o seu recurso favorito do Site?</label><br>
+            <select id="recurso">
+                <option disabled selected value="">Selecione uma opção</option>
+                <option>opção 1</option>
+                <option>opção 2</option>
+                <option>opção 3</option>
+            </select>
+        </div>
+        <br>
+        <fieldset>
+            <div>
+                <label>O que você gostaria de ver melhorado? (Marque todas as opções aplicáveis)</label><br>
+                <input type="checkbox" id="melhoria1" name="melhoria1" value="atendimento">
+                <label for="melhoria1">atendimento</label> <br>
+
+                <input type="checkbox" id="melhoria2" name="melhoria2" value="chat">
+                <label for="melhoria2"> chat </label> <br>
+
+               
+
+                <input type="checkbox" id="melhoria3" name="melhoria3" value="forum">
+                <label for="melhoria3">forum</label> <br>
+
+                <input type="checkbox" id="melhoria4" name="melhoria4" value="conteudo">
+                <label for="melhoria4">conteudo</label> <br>
+                
+                
+            </div>
+        </fieldset>
+
+        <div>
+            <br>
+            <label>Algum comentário ou sugestão?</label> <br>
+            <textarea row="6" style="width: 40em" id="sugestao" name="sugestao" placeholder="Insira seu comentário aqui ..."></textarea>
+        </div>
+        <button type="submit" onclick="validarFormPesquisa()">Enviar</button>
+        
+
+    </form>
+</body>
+</html>
